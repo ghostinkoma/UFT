@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拡張神の方程式：包括的統一理論の定式化と詳細構成</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjS3OJU8pTHc65zQjNqL4Rhjb9+23yZ8+3n3v1I7pYCH1rS8c5jYfA9" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0IungKV+CiVF8yYd0C0S" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: #1a1a1a;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 2em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.3em;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 1.5em;
+        }
+        p {
+            text-align: justify;
+            margin: 1em 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.8em;
+            text-align: left;
+        }
+        th {
+            background-color: #e6e6e6;
+            font-weight: bold;
+        }
+        .katex {
+            font-size: 1.1em;
+        }
+        .equation {
+            text-align: center;
+            margin: 1.5em 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media print {
+            body {
+                background-color: #fff;
+                max-width: none;
+                padding: 0;
+            }
+            h1, h2, h3 {
+                color: #000;
+            }
+            table {
+                page-break-inside: auto;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            th, td {
+                padding: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>拡張神の方程式：包括的統一理論の定式化と詳細構成</h1>
+
+    <h2>1 はじめに</h2>
+    <p>本稿では，現代物理学の主要領域を16項目の零化条件として同時に満たす「拡張神の方程式」を詳細に定式化する。各項はゲージ–重力の整合から宇宙論パラメータ，弦/M理論，量子重力，計算リソース制約までを網羅し，\(\Theta=(D=4,\;G=\mathrm{SO}(10),\;\mathsf H=\mathrm{AdS}_5/\mathrm{CFT}_4,\;\sigma_N=\mathrm{e\text{-}folds})\) の下で統一的枠組みを提供する。以降，まず方程式の全体像を示し，ついで各成分の数学的・物理的定義，作用原理，数値検証プロトコル，今後の展望を述べる。</p>
+
+    <h2>2 理論的枠組み</h2>
+    <p>拡張神の方程式は16成分からなるベクトル状場 \(\Phi = \bigoplus_{A=1}^{16}\Psi^A\) のノルム零化 \(\|\Phi\|^2 = \sum_{A=1}^{16}\int_M\Psi^A\wedge\star\Psi^A = 0\) を基本条件とする。非負各項の総和がゼロとなることで，\(\Psi^A=0\) が各物理領域の独立命題を同時に保証し，単一の統一方程式として振る舞う。</p>
+
+    <h2>3 方程式の定式化</h2>
+    <p>拡張神の方程式は以下のように表される：</p>
+    <div class="equation">
+        \(\Bigl\lVert \Psi_1\oplus\Psi_2\oplus\cdots\oplus\Psi_{16} \Bigr\rVert^2 = 0\)
+    </div>
+    <p>\(\Psi_1\)～\(\Psi_{16}\) はそれぞれ次節以降で定義した16種類の物理条件を表す。零化条件は作用 \(S[\Phi] = \int_M\langle\Phi,\Delta\Phi\rangle + \frac{\lambda}{4!}\|\Phi\|^4\) の変分 \(\delta S=0\) と同値となり，統一理論の運動方程式を導出可能である。</p>
+
+    <h2>4 成分の詳細定義</h2>
+
+    <h3>4.1 1–8 成分の数学的形式</h3>
+    <table>
+        <tr>
+            <th>番号</th>
+            <th>成分記号</th>
+            <th>数式</th>
+            <th>物理的意義</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>\(\Psi_1\)</td>
+            <td>\(d\mathcal{A}+\mathcal{A}^2\)</td>
+            <td>ゲージ–重力二重曲率の平坦性</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>\(\Psi_2\)</td>
+            <td>\(\mathrm{ch}(\mathcal{A})-\widehat A(R)\wedge\mathrm{ch}(F)\)</td>
+            <td>位相整合（異常キャンセル）</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>\(\Psi_3\)</td>
+            <td>\(\delta_\epsilon S\)</td>
+            <td>N=1 SUGRA＋SO(10) GUT の局所超対称性</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>\(\Psi_4\)</td>
+            <td>\(\mathfrak{B}\circ\mathcal{R}_\lambda-\mathcal{R}^\partial_\lambda\circ\mathfrak{B}\)</td>
+            <td>ホログラフィック RG 可換性</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>\(\Psi_5\)</td>
+            <td>\(n_s-(1-\frac{2}{N})\)</td>
+            <td>CMB スペクトル指数</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>\(\Psi_6\)</td>
+            <td>\(r-\frac{12}{N^2}\)</td>
+            <td>CMB テンソル–スカラー比</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>\(\Psi_{\beta}^{(2)}\)</td>
+            <td>\(\alpha_i^{-1}(M_Z)-\alpha_G^{-1}-\int[\beta_i^{(1)}+\beta_i^{(2)}+\Delta_i^{\rm thresh}]d\ln\mu\)</td>
+            <td>2ループ RGE ＋閾値補正</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>\(\Psi_{\nu}\)</td>
+            <td>\(\{\Delta m^2_{\rm sol}-(m_{\nu_2}^2-m_{\nu_1}^2),\dots\}\)</td>
+            <td>シーソー機構によるニュートリノ質量＆PMNS</td>
+        </tr>
+    </table>
+
+    <h3>4.2 9–16 成分の数学的形式</h3>
+    <table>
+        <tr>
+            <th>番号</th>
+            <th>成分記号</th>
+            <th>数式</th>
+            <th>物理的意義</th>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>\(\Psi_{\mathrm{CMB}}^{(\alpha_s,f_{\rm NL})}\)</td>
+            <td>\(\{\alpha_s-(-2/N^2),\,f_{\rm NL}-\frac{5}{12}(1-n_s)\}\)</td>
+            <td>CMB ランニングと非ガウス性</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>\(\Psi_{\mathrm{holo}}^{(2,3)}\)</td>
+            <td>\(\{\langle OO\rangle_{\rm CFT}-\langle OO\rangle_{\rm bulk},\,\dots\}\)</td>
+            <td>AdS\(_5\)/CFT\(_4\) 2・3点一致</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>\(\Psi_{\mathrm{str}}\)</td>
+            <td>\(\frac12\int_Xc_3(V)-3\)</td>
+            <td>Calabi–Yau/G\(_2\) 3世代</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>\(\Psi_{\rm DM}\)</td>
+            <td>\(\{\Omega_{\rm DM}-\Omega_{\rm DM}^{\rm exp},\,m_\chi-m_\chi^{\rm exp}\}\)</td>
+            <td>ダークマター密度と質量</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>\(\Psi_{\rm BAU}\)</td>
+            <td>\(Y_B-Y_B^{\rm exp}\)</td>
+            <td>バリオン非対称性</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>\(\Psi_{\rm topo}\)</td>
+            <td>\(\{h^{1,1}-h^{1,1}_{\rm exp},\,h^{2,1}-h^{2,1}_{\rm exp},\,\#\mathrm{sing.}-\#\mathrm{sing.}_{\rm exp}\}\)</td>
+            <td>多様体ホッジ数・特異点数</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>\(\Psi_{\rm QG}\)</td>
+            <td>\(Z_{\rm QG}-Z_{\rm CFT}\)</td>
+            <td>量子重力と CFT のパーティション関数一致</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>\(\Psi_{\rm comp}\)</td>
+            <td>\(\{T_{\rm comp}-T_{\rm limit},\,\mathcal F_{\rm flops}-\mathcal F_{\rm limit}\}\)</td>
+            <td>計算時間と FLOPS 制約</td>
+        </tr>
+    </table>
+
+    <h2>5 作用原理と運動方程式</h2>
+    <p>作用 \(S[\Phi] = \int_M\langle\Phi,\Delta\Phi\rangle + \frac{\lambda}{4!}\|\Phi\|^4\) に対し変分 \(\delta S=0\) を行うと，</p>
+    <div class="equation">
+        \(2\Delta\Phi + \frac{\lambda}{3!}\|\Phi\|^2\Phi = 0\)
+    </div>
+    <p>という運動方程式を得る。真空解 \(\Phi=0\) は各 \(\Psi^A=0\) を同時に満たし，統一理論のすべての命題を自動的に保証する。</p>
+
+    <h2>6 数値検証プロトコル</h2>
+    <p>以下の実験・観測と数値計算によって各零化条件を検証する：</p>
+    <ol>
+        <li>CMB パラメータ \((n_s,r,\alpha_s,f_{\rm NL})\) の高精度測定（LiteBIRD, Planck）</li>
+        <li>陽子崩壊限界 \(\tau_p\sim10^{35\text{–}36}\,\mathrm{yr}\)（Hyper-Kamiokande）</li>
+        <li>ニュートリノ質量階層と CP 位相（DUNE, JUNO）</li>
+        <li>ダークマター直接検出（XENONnT, LZ）および加速器探索（LHC, FCC）</li>
+        <li>ホログラフィック相関関数の数値解析（モンテカルロ法）</li>
+        <li>Calabi–Yau ホッジ数・閾値補正付き RGE の SageMath/SciPy 実装</li>
+    </ol>
+
+    <h2>7 結論と今後の展望</h2>
+    <p>本稿で提示した拡張神の方程式は，16項の零化条件によってゲージ–重力，超対称性，宇宙論，弦/M 理論，量子重力，計算制約を統一的に取り扱う枠組みを提供する。今後は作用原理のさらなる展開による非摂動効果解析，非 AdS 時空への拡張，コンパクト化多価性問題の解消，自動化されたトポロジー計算モジュールの構築を進め，観測・実験と理論を結びつける包括的統一理論の実現を目指す。</p>
+
+    <div class="footer">
+        <p>© 2025 ghostinkoma. All rights reserved.</p>
+        <p>This document, including all original mathematical expressions, derivations, and associated explanatory text, is licensed under the MIT License.</p>
+        <p>This repository, including all code, documentation, and original mathematical expressions and derivations, is licensed under the MIT License.</p>
+    </div>
+</body>
+</html>

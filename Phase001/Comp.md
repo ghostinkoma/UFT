@@ -5219,3 +5219,8 @@ eq = ch - Ahat_ch  # = d CS
 sp.solve(eq, ch)  # 一致確認
 
 結果: 境界で補正され、破綻なし。
+
+© 2025 ghostinkoma. All rights reserved.  
+This document, including all original mathematical expressions, derivations, and associated explanatory text, is licensed under the MIT License.
+
+This repository, including all code, documentation, and original mathematical expressions and derivations, is licensed under the MIT License (this file for details).
